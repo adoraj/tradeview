@@ -108,7 +108,7 @@ Datafeeds.UDFCompatibleDatafeed.prototype._send = function(url, params) {
 Datafeeds.UDFCompatibleDatafeed.prototype._initialize = function() {
 	var that = this;
 
-	this._send(this._datafeedURL + '/config')
+	this._send('/config')
 		.done(function(response) {
 			var configurationData = parseJSONorNot(response);
 			that._setupWithConfiguration(configurationData);
